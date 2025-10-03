@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "faster-rl-training"
+version = "0.1.0"
+description = "KV-streams: in-place KV-cache compaction for faster agentic RL rollouts, with exact trainer replay"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Thanh Vu" }]
+keywords = ["reinforcement-learning", "llm", "kv-cache", "agents", "rope", "paged-attention"]
+dependencies = ["torch>=2.1", "numpy>=1.24"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.4"]
+
+[project.scripts]
+kvstreams = "kvstreams.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["kvstreams*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+ignore = ["E501", "E731", "B905"]
