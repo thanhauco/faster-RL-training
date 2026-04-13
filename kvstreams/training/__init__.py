@@ -1,4 +1,6 @@
+from .grpo import group_advantages, policy_loss
 from .logprobs import token_logprobs
+from .mismatch import MismatchReport, measure_mismatch, mismatch_report
 from .replay import (
     Batch,
     TrainSequence,
@@ -11,11 +13,16 @@ from .replay import (
 
 __all__ = [
     "Batch",
+    "MismatchReport",
     "TrainSequence",
     "build_sequences",
     "collate",
     "full_context_sequence",
+    "group_advantages",
     "kvstream_sequence",
+    "measure_mismatch",
+    "mismatch_report",
+    "policy_loss",
     "token_logprobs",
     "window_sequences",
 ]
