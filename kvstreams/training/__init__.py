@@ -10,10 +10,15 @@ from .replay import (
     kvstream_sequence,
     window_sequences,
 )
+from .sft import SFTTrainer, sft_loss
+from .trainer import RLConfig, RLTrainer
 
 __all__ = [
     "Batch",
     "MismatchReport",
+    "RLConfig",
+    "RLTrainer",
+    "SFTTrainer",
     "TrainSequence",
     "build_sequences",
     "collate",
@@ -23,6 +28,7 @@ __all__ = [
     "measure_mismatch",
     "mismatch_report",
     "policy_loss",
+    "sft_loss",
     "token_logprobs",
     "window_sequences",
 ]
