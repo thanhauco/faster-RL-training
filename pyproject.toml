@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "faster-rl-training"
-version = "0.1.0"
+version = "0.2.0"
 description = "KV-streams: in-place KV-cache compaction for faster agentic RL rollouts, with exact trainer replay"
 readme = "README.md"
 requires-python = ">=3.10"

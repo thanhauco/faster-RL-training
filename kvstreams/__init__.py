@@ -7,4 +7,4 @@ the recorded compaction history so that training sees exactly the KV states that
 generation used.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
